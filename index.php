@@ -35,7 +35,6 @@
 
             <div>
                 <h3 class="float-md-start mb-0">Ecommerce Labs</h3>
-             
                 <?php
                     session_start();
                     if(isset($_SESSION['cid'])){
@@ -44,21 +43,6 @@
                 <?php
                     }
                 ?>
-                    <!-- Check if logged in user is admin with role =1 and seesion id initiated -->
-                <?php
-                    if(isset($_SESSION['cid']) && $_SESSION['role']=="1"){
-                        
-                ?>
-                <a class="btn btn-success" style="align-self: right;" href="admin/Brand.php">Brand</a>
-                <a class="btn btn-success" style="align-self: right;" href="admin/Category.php">Category</a>
-
-                <?php
-                    }
-                ?>
-
-
-
-
             </div>
             <!-- -->
         </header>
@@ -78,9 +62,35 @@
                 ?>
             <p class="lead">Welcome to my labs.</p>
             <br>
-            <p class="lead">Click Register to access the register form</p>
+
+            <?php
+                    if(isset($_SESSION['cid']) && $_SESSION['role']=="1"){
+                        
+                ?>
             <a class="btn btn-success" style="text-align: center" href="login/registerform.php">Register</a>
             <a class="btn btn-success" style="text-align: center" href="login/loginform.php">Login </a>
+            <p class="lead">Click Register to access the register form</p>
+            <?php
+                    }
+                ?>
+
+
+
+
+
+            <!-- Check if logged in user is admin with role =1 and seesion id initiated -->
+            <?php
+                    if(isset($_SESSION['cid']) && $_SESSION['role']=="1"){
+                        
+                ?>
+            <a class="btn btn-success" style="align-self: right;" href="admin/Brand.php">Brand</a>
+            <a class="btn btn-success" style="align-self: right;" href="admin/Category.php">Category</a>
+
+            <?php
+                    }
+                ?>
+
+
 
         </main>
 
