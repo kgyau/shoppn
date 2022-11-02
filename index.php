@@ -25,11 +25,6 @@
 
 
 <body class="d-flex h-100 text-center text-white bg-dark">
-
-
-
-
-
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
 
@@ -51,47 +46,44 @@
 
 
         <main class="px-3">
-            <!--
-        <h1>Cover your page.</h1> -->
-
             <?php
             if(!empty($_SESSION['name'])){
               
+                
                 echo $_SESSION['name']; 
             }
                 ?>
             <p class="lead">Welcome to my labs.</p>
+
+            <br>
             <br>
 
-            <?php
-                    if(isset($_SESSION['cid']) && $_SESSION['role']=="1"){
-                        
+            <?php 
+            if(empty($_SESSION['cid'])){
                 ?>
+            <br>
+
             <a class="btn btn-success" style="text-align: center" href="login/registerform.php">Register</a>
             <a class="btn btn-success" style="text-align: center" href="login/loginform.php">Login </a>
             <p class="lead">Click Register to access the register form</p>
+
+
+
+
             <?php
-                    }
-                ?>
-
-
-
-
+            }
+            ?>
 
             <!-- Check if logged in user is admin with role =1 and seesion id initiated -->
             <?php
-                    if(isset($_SESSION['cid']) && $_SESSION['role']=="1"){
-                        
-                ?>
+             if(isset($_SESSION['cid']) && $_SESSION['role']=="1"){
+            ?>
             <a class="btn btn-success" style="align-self: right;" href="admin/Brand.php">Brand</a>
             <a class="btn btn-success" style="align-self: right;" href="admin/Category.php">Category</a>
 
-            <?php
-                    }
-                ?>
-
-
-
+           <?php
+             } 
+            ?>
         </main>
 
         <footer class="mt-auto text-white-50">
