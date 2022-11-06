@@ -13,6 +13,8 @@ require('../controllers/product_controller.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="../css/product.css" rel="stylesheet">
+
 
     <title>products</title>
 </head>
@@ -99,7 +101,7 @@ require('../controllers/product_controller.php');
                         </div>
                         <div class="row justify-content-end">
                             <div class="form-group col-sm-6">
-                                <button type="submit" value="Add new product" name="sumbitprod" class="btn btn-primary">Add Product</button>
+                                <button type="submit" value="Add new product" name="submitprod" class="btn btn-primary">Add Product</button>
                             </div>
                         </div>
 

@@ -60,10 +60,9 @@ class Brandclass extends db_connection{
         return $this-> db_query($sql);
     }
 
-
-    function addproduct_cls($prodcat,$prodtitle,$prodprice,$prodbrand,$proddesc,$prodimage,$prodkeywords){
-        $sql = "INSERT INTO `products` (`product_cat`,`product_title`,`product_price`,`product_brand`,`product_desc`,`product_image`,`product_keywords`) 
-        VALUES ('$prodcat','$prodtitle','$prodprice','$prodbrand','$proddesc','$prodimage','$prodkeywords')";
+    function addproduct_cls($prodcat,$prodbrand,$prodtitle,$prodprice,$proddesc,$prodimage,$prodkeywords){
+        $sql = "INSERT INTO `products` (`product_cat`,`product_brand`,`product_title`,`product_price`,`product_desc`,`product_image`,`product_keywords`) 
+        VALUES ('$prodcat','$prodbrand','$prodtitle','$prodprice','$proddesc','$prodimage','$prodkeywords')";
         return $this->db_query($sql);
     }
 

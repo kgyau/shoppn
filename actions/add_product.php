@@ -2,33 +2,29 @@
 //making actuioin aware fof controller
 include("../controllers/product_controller.php");
 
+
+
 // collecting form data
 if(isset($_POST['submitprod'])){
     // for image 
-
-    $pic= "../images/product".basename($_FILES['prodimage']['name']);
-
-    if($pic){
-        echo "sucess";
-    }else{
-        "fail";
-    }
-
-    var_dump($pic);
+    // var_dump($pic);
  // I AM INTERESTED INN THE TWO OTHE RITEMS AND PUTTIGN THEM IN A VARIABLE
-    $prodtitle =$_POST['prodtitle'];   
-    $prodbrand =$_POST['prodbrand'];
     $prodcat =$_POST['prodcat'];
+    $prodbrand =$_POST['prodbrand'];
+    $prodtitle =$_POST['prodtitle']; 
     $prodprice =$_POST['prodprice'];
     $proddesc =$_POST['proddesc'];
     $prodkeywords=$_POST['prodkeywords'];
-    $prodimage = $_FILES['prodimage']['name'];
+    $prodimage = NULL;
+    // 
     
+    $pic= "../images".basename($_FILES['prodimage']['name']);
+
 
 //    echo $prodcat,$prodtitle,$prodprice,$prodbrand,$proddesc,$prodimage,$prodkeywords; 
 
 
-  $result = addproduct_ctr($prodcat,$prodtitle,$prodprice,$prodbrand,$proddesc,$prodimage,$prodkeywords);
+  $result = addproduct_ctr($prodcat,$prodbrand,$prodtitle,$prodprice,$proddesc,$prodimage,$prodkeywords);
 
     if ($result) {
 
@@ -41,7 +37,7 @@ if(isset($_POST['submitprod'])){
         header("location:../admin/product.php");
 
     } else{
-        echo 'Picture insertion failed';
+         header("location:../admin/product.php");
     }
 }
 
