@@ -16,9 +16,8 @@ if(isset($_POST['submitprod'])){
     $proddesc =$_POST['proddesc'];
     $prodkeywords=$_POST['prodkeywords'];
     $prodimage = NULL;
-    // 
     
-    $pic= "../images".basename($_FILES['prodimage']['name']);
+    $pic= "../images/product/".basename($_FILES['prodimage']['name']);
 
 
 //    echo $prodcat,$prodtitle,$prodprice,$prodbrand,$proddesc,$prodimage,$prodkeywords; 

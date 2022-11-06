@@ -68,7 +68,7 @@ class Brandclass extends db_connection{
 
     function viewallprod_cls(){
         $sql= "SELECT * FROM products";
-        return $this-> db_query($sql);
+        return $this-> db_fetch_all($sql);
     }
 
     function searchprod_cls(){

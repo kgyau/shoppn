@@ -48,13 +48,13 @@ require('../controllers/product_controller.php');
                 $product = viewallprod_ctr();
                 foreach ((array) $product as $aproduct) {
                     
-                    $product_title = $aproduct['prodtitle'];
-                    $pcat = $aproduct['prodcat'];
-                    $pbrand = $aproduct['prodbrand'];
-                    $pprice = $aproduct['prodprice'];
-                    $pdesc = $aproduct['proddesc'];
-                    $pkey = $aproduct['prodkeywords'];
-                    $product_image = $aproduct['prodimage'];
+                    $product_title = $aproduct['product_title'];
+                    $pcat = $aproduct['product_cat'];
+                    $pbrand = $aproduct['product_brand'];
+                    $pprice = $aproduct['product_price'];
+                    $pdesc = $aproduct['product_desc'];
+                    $pkey = $aproduct['product_keywords'];
+                    $product_image = $aproduct['product_image'];
                     
                     echo"
                     <tr>
