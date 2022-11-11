@@ -33,7 +33,7 @@ $cat = selectonecat_ctr($prod['product_cat']);
 
 <body>
     <div class="container d-flex justify-content-center">
-    <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>">
+
         <figure class="card card-product-grid card-lg"> <a class="img-wrap" data-abc="true"> <img src="../images/product/<?php echo $prod['product_image']; ?> "> </a>
             <figcaption class="info-wrap">
                 <div class="row">
