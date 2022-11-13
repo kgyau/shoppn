@@ -19,8 +19,6 @@ require("../controllers/cart_controller.php");
                   header("location:../view/cart.php");
                
          } else {
-            //header("location:../view/loggedin_index.php");
-            // echo "sorry increase qty in cart";
             echo "fail";
          }
    }

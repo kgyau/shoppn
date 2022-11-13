@@ -34,8 +34,10 @@ $cat = selectonecat_ctr($prod['product_cat']);
 <body>
     <div class="container d-flex justify-content-center">
 
-        <figure class="card card-product-grid card-lg"> <a class="img-wrap" data-abc="true"> <img src="../images/product/<?php echo $prod['product_image']; ?> "> </a>
-            <figcaption class="info-wrap">
+        <figure class="card card-product-grid card-lg"> <figcaption class="info-wrap">
+        <a class="img-wrap" data-abc="true"> <img src="../images/product/<?php echo $prod['product_image']; ?> "> </a>
+        <img src=" ../images/product/$product_image" class='card-img-top' style="width: 100px; height: 100px ;" >
+            
                 <div class="row">
                     <div class="col-md-9 col-xs-9"> Name: <?php echo $prod['product_title']; ?></div>
                 </div>
