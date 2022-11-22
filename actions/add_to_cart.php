@@ -1,6 +1,5 @@
 <?php
 
-
 include ("../settings/core.php");
 require("../controllers/cart_controller.php");
 
@@ -13,6 +12,9 @@ require("../controllers/cart_controller.php");
      $ip_add= $_SERVER['REMOTE_ADDR'];
      //quantity
      $qty= 1;
+
+     echo $p_id,$c_id,$ip_add,$qty;
+
     //duplicate checker
           $result= addtocart_ctr($p_id,$ip_add,$c_id,$qty);
          if ($result) {
